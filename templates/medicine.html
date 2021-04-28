@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <style>
+
+    #content {
+        margin: 22px;
+        margin-left: 40px;
+        text-align: justify;
+        font-size: 20px;
+      }
+  
+    </style>
+
+<style>
+
+  html{
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  html img{
+  filter: invert(1) hue-rotate(180deg);
+  }
+
+</style>
+  
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('INDEX')}}"><b>PHAD</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url_for('PREDICTION')}}">Prediction</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('BMI')}}">BMI</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('FOOD')}}">Food Suggestions</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('DIABETES')}}">Diabetes & Management</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <li class="nav-item">
+            <a class="nav-link active" href="{{ url_for('MEDICINE')}}">Medical Management</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div id="content">
+
+
+
+    <h2 style="text-align: center;">Medical Management</h2>
+    <br>
+
+
+
+    <p>
+
+      Inspite of following dietary control, regular exercise and lifestyle modification, some patients are unable to retain their blood glucose level within normal limit. These patients require medicines.
+
+    </p>
+
+    <p>
+      Anti-Diabetic medicines are available in two forms: <br>
+
+      <ol>
+        <li><b>Oral (Tablets / Capsules):</b> <br> Most of the type 2 diabetes patients respond well to oral drugs. Metformin, Glipizide, Glimepiride, Pioglitazone, Voglibose, etc are mainly used oral anti-diabetic nowadays. They should be used strictly under medical guidance.</li><br>
+
+        <li><b>Parentral (Injections):</b> <br> Insulin is the injectible anti-diabetic drug. Type-1 Diabetes patients are treated with insulin only. Type-2 diabets patients who do not respond well to oral drugs are treaated with insulin or a combination of Insulin and oral drugs. <br> Types of Insulins available:
+        
+        <ol> 
+          <li>Rapid Acting</li>
+          <li>Short Acting</li>
+          <li>Intermediate Acting</li>
+          <li>Long Acting</li>
+          <li>Mixed Insulin</li>
+        </ol>
+        Again they should be used very strictly under medical guidance only.
+        </li>
+      </ol>
+      <br>
+      Here is the list of good quality anti-diabetic drugs (manufactured by standard companies) available in the market:
+
+    </p>
+
+    <br>
+   
+    
+    
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Manufacturer / Marketer</th>
+      <th scope="col">Strip / Injection</th>
+      <th scope="col">Contains</th>
+      <th scope="col">MRP</th>
+    </tr>
+  </thead> 
+  <tbody>
+    <tr>
+      <th scope="row">Glycomet</th>
+      <td>US Vitamins (USV)</td>
+      <td>Strip</td>
+      <td>10 tablets</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">Galvus Met 50mg</th>
+      <td>Novartis India</td>
+      <td>Strip</td>
+      <td>15 tablets</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <th scope="row">Janumet 50 mg</th>
+      <td>MSD Pharmaceutical</td>
+      <td>Strip</td>
+      <td>15 tablets</td>
+      <td>400</td>
+    </tr>
+    <tr>
+      <th scope="row">Glucobay M 50 mg</th>
+      <td>Bayer Pharmaceutical</td>
+      <td>Strip</td>
+      <td>10 tablets</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <th scope="row">Diabose M 50 mg</th>
+      <td>Micro Lab</td>
+      <td>Strip</td>
+      <td>10 tablets</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <th scope="row">Trajenta 5 mg</th>
+      <td>Boehringer Ingelheim</td>
+      <td>Strip</td>
+      <td>10 tablets</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <th scope="row">Ondero 5mg</th>
+      <td>Lupin Pharmaceutical</td>
+      <td>Strip</td>
+      <td>10 tablets</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <th scope="row">Mixtard</th>
+      <td>Abbott Pharmaceutical</td>
+      <td>Injection</td>
+      <td>3ml</td>
+      <td>260</td>
+    </tr>
+    <tr>
+      <th scope="row">Lantus</th>
+      <td>Sanofi India</td>
+      <td>Injection</td>
+      <td>3ml</td>
+      <td>600</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<pre>
+
+
+
+
+
+
+
+</pre>
+
+
+
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+ integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+ crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+ integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+ crossorigin="anonymous"></script>
+</body>
+</html>

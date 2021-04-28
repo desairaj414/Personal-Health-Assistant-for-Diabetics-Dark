@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes & Management</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <style>
+
+  #content {
+      margin: 22px;
+      margin-left: 40px;
+      text-align: justify;
+      font-size: 20px;
+    }
+
+    img{
+      height: 250px;
+      margin: 10px;
+      margin-bottom: 20px;
+      width: 30vw;
+      
+    }
+
+  </style>
+
+<style>
+
+  html{
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  html img{
+  filter: invert(1) hue-rotate(180deg);
+  }
+
+</style>
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('INDEX')}}"><b>PHAD</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url_for('PREDICTION')}}">Prediction</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('BMI')}}">BMI</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('FOOD')}}">Food Suggestions</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+          <li class="nav-item">
+            <a class="nav-link active" href="{{ url_for('DIABETES')}}">Diabetes & Management</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('MEDICINE')}}">Medical Management</a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+<div id="content">
+  <h1>Diabetes</h1>
+  <br><br>
+  <h3>What is Diabetes and what causes it? </h3>
+
+  <p>
+    Diabetes Mellitus, commonly known as Diabetes, is a chronic, metabolic disease characterized by elevated levels of blood glucose (or blood sugar), which
+    leads over time to serious damage to the heart, blood vessels, eyes, kidneys and nerves. Beta cells of Pancreas secretes a hormone named Insulin which controls blood glucose level. There are 2 reasons for the elevated glucose levels found in the blood:
+  <ol>
+    <li>Decreased amount of Insulin secretion by the Pancreas.</li>
+    <li>Insensitivity of the receptors of Insulin or resistance to absorption by cells.</li>
+  </ol>
+  <p>
+
+    <br><br>
+
+  <p>
+  <h3>Types of Diabetes: </h3>
+  <ol>
+    <li>Type 1 diabetes, once known as juvenile diabetes or insulin-dependent diabetes, is a chronic condition in
+      which the pancreas produces little or no insulin by itself.</li>
+    <li> The most common is type 2 diabetes, usually in adults, which occurs when the body becomes resistant to
+      insulin or doesn't make enough insulin.</li>
+  </ol>
+  </p>
+
+  <br><br>
+
+  <p>
+  <h3>Prevalence [International Diabetes Federeation (IDF 2020)]</h3>
+
+  <p>
+    According to WHO, about 422 million people worldwide have diabetes, the majority living in low-and middle-income countries, and 1.6 million deaths are directly attributed to diabetes each year. Both the number of cases and the prevalence of diabetes have been steadily increasing over the past few decades.
+  </p>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">SNo.</th>
+        <th scope="col">Region</th>
+        <th scope="col">Cases</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">1</td>
+        <td>World</td>
+        <td>463 Millions</td>
+      </tr>
+      <tr>
+        <td scope="row">2</td>
+        <td>China</td>
+        <td>116 Millions</td>
+
+      </tr>
+      <tr>
+        <td scope="row">3</td>
+        <td>India</td>
+        <td>77 Millions</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <br><br>
+  </p>
+  <h3>Symptoms and Complications of Diabetes</h3>
+  <p>Diabetes of all types can lead to complications in many parts of the body and can increase the overall risk of
+    dying prematurely. Possible complications include heartattack, stroke, kidney failure, leg amputation, vision loss
+    and nerve damage. Therefore, it is necessary to identify the symptoms of diabetes <i>(The Silent Killer)</i> at an early stage. Here are some of the symptoms: <br>
+
+  <ul>
+    <li>Polyuria - frequent urination</li>
+    <li>Polydipsia - frequent thirst</li>
+    <li>Polyphagia - frequent hunger</li>
+    <li>Lose weight without trying</li>
+    <li>Have blurry vision</li>
+    <li>Have numb or tingling hands or feet</li>
+    <li>Feel very tired</li>
+    <li>Have very dry skin</li>
+    <li>Have sores that heal slowly</li>
+    <li>Have more infections than usual</li>
+  </ul>
+  </p>
+  <br><br>
+<h3>Target Organs / Red Alerts</h3>
+<p>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Organs</th>
+        <th scope="col">Complications</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">Heart</td>
+        <td>Coronary Artery disease, Heart Attacks</td>
+      </tr>
+
+      <tr>
+        <td scope="row">Kidney</td>
+        <td>Chronic Kidney Failure</td>        
+      </tr>
+
+      <tr>
+        <td scope="row">Brain</td>
+        <td>Strokes</td>       
+      </tr>
+
+      <tr>
+        <td scope="row">Eyes</td>
+        <td>Retinal detachment, Blindness</td>       
+      </tr>
+
+      <tr>
+        <td scope="row">Feet</td>
+        <td>Gangrene and Amputation</td>       
+      </tr>
+
+      <tr>
+        <td scope="row">Skin</td>
+        <td>Dry Skin, Tingling and numbness (Peripheral Neuritis)</td>       
+      </tr>
+
+    </tbody>
+  </table>
+</p>
+<br><br>
+
+<p>
+  <h3>Investigations for Diabetes</h3>
+<ol>
+  <li><b>Fasting Blood Sugar (FBS)</b> <br> Overnight fasting of 8 hours and morning sample for evaluation. Normal value should lie below 105mg/dL </li><br>
+
+  <li><b>Post Prandial Blood Sugar (PPBS)</b> <br> Blood samples are evaluated after2 hours of normal meal. Normal value should lie below 180mg/dL</li><br>
+
+  <li><b>HbA1C Test(Haemoglobin A1 C Test)</b> <br> It informs the average level of blood glucose of the past 3 months. Normal value should lie below 5.7%</li><br>
+
+  <li><b>Lipid Profile and Renal Profile</b> <br> To evaluate Heart and Kidney functions</li><br>
+
+  <li><b>Regular Opthalmic checkup</b> <br> To evaluate Retinal function</li>
+</ol>
+</p>
+
+<br><br>
+<p>
+
+  <h3>Exercise for Diabetics</h3>
+  Regular Exercise helps one to manage their blood glucose levels and weight. It also reduces risk of heart attack and stroke and promotes overall health. <br>
+
+  Here are few exercises: <br> <br>
+
+  <ol>
+    <li><b>WALKING</b> <br> Best exercise for diabetics. No need to join gym or to purchase costly equipments. Always wear supportive pair of shoes while walking to avoid injury to your feet. Walk in a safe place to avoid accidents. Brisk walking of 30 minutes a day minimum fo 5 days a week will be enough.</li> <br>
+
+    <li><b>CYCLING</b> <br> Roughly 50% of people with diabetics also have Arthritis (joint pain). So, choose cycling if you don't have joint pain.</li> <br>
+
+    <li><b>SWIMMING</b> <br> It gives your heart, lungs and muscles workout, while exerting little stress on your joints.</li> <br>
+
+    <li><b>TEAM SPORTS</b> <br> It is important for those who find it hard to motivate themselves. Team sports like Basket Ball, Badminton, Tennis, etc. are suggested.</li><br>
+
+
+    <li><b>AEROBIC DANCE</b><br> It is a good alternative especially for females who loves to dance.</li> <br>
+
+    <li><b>MUSCLE STRENGTHNING EXERCISES</b><br>
+    
+    <ol type="a">
+      <li>WEIGHTLIFTING</li>
+      <li>YOGA: Proper guidance by a trainer is needed.</li>
+      <li>CALISTHENICS (Using one's own body weight to strengthen muscles): PushUps, PullUps, Squats, etc.</li>
+    </ol><br>
+    
+    <b>CAUTION:</b> <i>Consult your doctor before starting muscle strengthning exercises, if you have moderate or severe Diabetic Retinopathy as it may cause retinal detachment and blindness.</i>
+    </li>
+  </ol>
+</p>
+
+
+<div class="container1" style="display:grid; grid-template-columns: repeat(3,auto);justify-content: space-evenly;">
+  
+  
+   <img src="https://contents.mediadecathlon.com/p1261690/1920x0/9cr4/marche-sportive.jpg?k=d4381cc8c4da7fc4eb78433760ac5a36" style="width: 30vw;margin: 10px;" alt="WALKING">
+
+
+   <img src="https://static.euronews.com/articles/stories/04/96/92/54/1000x563_cmsv2_46d24b9b-1eec-58cf-ad75-cc31ea0a204d-4969254.jpg" alt="CYCLING">
+
+
+   <img src="https://gtimg.tokyo2020.org/image/private/f_auto,t_article-lead-image-desktop/production/fklnstmhb9brofquxcim"style="width: 30vw;margin: 10px;" alt="SWIMMING">
+
+   <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18019095.jpg" alt="TEAM SPORTS">
+
+
+   <img src="https://i.ytimg.com/vi/965qZScyVVI/maxresdefault.jpg" alt="AEROBICS">
+
+   <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_498315669_2000133420009280401_126097.jpg"   alt="CALISTHENICS">
+
+   
+  </div>
+
+
+<br><br>
+<p>
+  <h3>Diet in Diabetes</h3>
+  <p>
+    A diabetes diet simply means eating the healthiest food in moderate amount and sticking to regular meal time to control blood glucose, blood lipids and weight. Here are few tips:
+
+    <ul>
+        <li>Take 3 meals a day at regular time.</li><br>
+        <li>Never skip your breakfast.</li><br>
+        <li>Consume minimum 3 litres of water per day.</li><br>
+        <li>Limit your common salt consumption to 6 gms per day.</li><br>
+        <li>Take whole grain bread, whole wheat pasta and moderate amount of brown rice.</li><br>
+        <li>Bajra, Juwar and Maize  are better than wheat.</li><br>
+        <li>Avoid starchy foods like potato, sweet potato, white flour, white rice, beetroot.</li><br>
+        <li>Avoid sweets, ice-creams, chocolates, jelly, jam, jaggery, honey. Though  Dark Chocolate in moderate amount is allowed.</li><br>
+        <li>There is nothing like <i> Diabetic sweets </i> or <i> diabetic ice-cream </i>. Beware of it and avoid it. Avoid artificial sweetner like <i> sugar-free </i> which contains aspartane whose safety to human body is not fully established. </li><br>
+        <li>Can take unsweetened tea or coffee in moderation.</li><br>
+        <li>Take plenty of green leafy vegetables which provide you vitamins, minerals and trace elements with good amount of fibres. Bitter-Gourd is the best vegetable for diabetics. E.g. Carrots, Tomatoes, Spinach, Cabbage, Broccoli, Cauliflower, Cucumber, Okra, Fenugreek, Ginger etc. </li><br>
+        <li>Apple, Cherries, Black Plums (Jamun), Guava, Grape-fruit, Avocados, Strawberries, Oranges, Peas, Kiwis are recommended.</li><br>
+        <li>Avoid fruits like Watermelon, Pineapple, Banana, Grapes, Custard Apple, Date, Mangoes.</li><br>
+        <li>Avoid dried fruits ad candied fruits.</li><br>
+        <li>Unsweetened Yogurt, Black chickpeas(Black Chana), Green peas, Chickpeas(Chhole), peanut, peanut milk and Eggs are good sources of protein.</li><br>
+        <li>Avoid refined oils. Instead use filtered oils. Try eating different kinds of oils regularly. Select from Olive Oil, Groundnut oil, Coconut oil, Mustard oil, Sunflower oil, Corn oil, etc.</li><br>
+        <li>Olive oil, Eggs, Nuts and Seeds, Avocados, Salmon fish, Tuna fish are good sources of good fats for diabetics. </li><br>
+        <li>Avoid Cookies, Biscuits, Cakes, baked dishes due to high content of Trans-fat.</li><br>
+        <li>Avoid sugar sweetened beverages, fruit juice and beer.</li><br>
+        
+    </ul>
+
+  </p>
+</p>
+
+
+
+<h3>Life Style Modification for Diabetics</h3>
+
+<p>
+
+  Diabetes is a Lifestyle disease. Certain modificaion in lifestyle will bring definite improvement in overall control of diabetes. <br>
+
+  <ul>
+    <li>Eat Healthy: Plenty of green leafy vegetables and fruits and whole grain products. Avoid food rich in fat and sugar.</li><br>
+    <li>Get Checkups: Regular checkups for blood glucose, blood lipids, kidney function, opthalic examination with advice of your consulting doctor.</li><br>
+    <li>Manage Stress: When you are stressed or anxious, nt only your blood sugar rises but your quality of life also worsens. Meditation in any form (learned under an expert) and Pranayam (deep breathing exercises) are very useful tools to manage stress. Get yourself engaged in good hobbies that relax you like reading, painting, listening music, etc.</li><br>
+    <li>Stop smoking by any means and limit your alcohol consumption (with advice of your doctor). Don't drink alcohol on an empty stomach.</li><br>
+    <li>Schedule your biological clock: Early to bed, early to rise. Follow regular meal time. Take minimum 7 hours of sleep at night.</li><br>
+  
+  </ul>
+
+
+</p>
+
+<div class="container1" style="display:grid; grid-template-columns: repeat(3,auto);justify-content: space-evenly;">
+  
+  
+  <img src="https://imgk.timesnownews.com/story/balanced-diet.gif?tr=w-600,h-450" alt="balanced-diet">
+
+
+  <img src="https://www.healthstatus.com/wp-content/uploads/2017/04/man-at-doctor-office1.jpg" alt="Regular Checkups">
+
+
+  <img src="https://www.news-medical.net/image.axd?picture=2019%2F5%2Fshutterstock_688367407.jpg" alt="Meditation">
+
+  <img src="https://benefitsbridge.unitedconcordia.com/wp-content/uploads/2018/07/nosmoking_569479.jpg" alt="no smoking">
+
+
+  <img src="https://cdn.cancercenter.com/-/media/ctca/images/others/blogs/2020/03-march/blog-relax-l.jpg" alt="Relaxation">
+
+
+  <img src="https://www.littlestaraba.org/wp-content/uploads/2017/02/baby-1151351_1920.jpg" alt="Sleep">
+
+  
+ </div>
+<br><br><br><br>
+
+
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+ integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+ crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+ integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+ crossorigin="anonymous"></script>
+
+</body>
+</html>
